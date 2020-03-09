@@ -16,7 +16,6 @@ use std::io::prelude::*;
  * NOTE:
  * - a register refers to the nth comma-delimited position
  * - need to step forward 4 positions after reading each opcode - except for op99.
- *
  */
 fn main() -> Result<(), Box<dyn Error + 'static>> {
     let mut file = File::open("./src/bin/advent_2.txt")?;
@@ -30,8 +29,9 @@ fn main() -> Result<(), Box<dyn Error + 'static>> {
         })
         .collect::<Result<Vec<i64>, Box<dyn Error>>>()?;
 
-    input[1] = 12;
-    input[2] = 2;
+    // needed for 2b
+    input[1] = 90;
+    input[2] = 74;
 
 
     let mut i = 0;
